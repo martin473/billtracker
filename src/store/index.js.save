@@ -1,0 +1,19 @@
+import { createStore } from 'vuex';
+import Vue from 'vue';
+import Vuex from 'vuex';
+import axios from 'axios';
+
+export default createStore({
+    state: {
+        data: [],
+        apiUrl: 'https://api.legiscan.com/?key=421f15e8b661176e9001a7e17a50f37b&op=getSearch&state=RI&query=solar',
+    },
+    getters: {},
+    mutations: {
+        setData(state, payload) {
+            state.recipes = payload;
+        }
+    },
+    actions: {},
+    modules: {},
+});
